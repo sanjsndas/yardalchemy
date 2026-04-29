@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>YardAlchemy Botanicals | Cookies Policy — Digital Seed Stewardship</title>
+    <meta name="description" content="YardAlchemy Botanicals uses minimal, transparent cookies to nurture your browsing experience. Learn about our ethical tracking, how to manage preferences, and our commitment to digital soil health.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        :root {
+            --deep-green: #1e4a2f;
+            --mid-green: #2e7d5e;
+            --soft-green: #9dc88d;
+            --light-green: #e2f0d9;
+            --accent-gold: #d4a373;
+            --soil-brown: #7f5539;
+            --white-smoke: #fefae0;
+        }
+
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active-nav {
+            color: var(--accent-gold);
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30,74,47,0.92), rgba(46,125,94,0.85)), url('https://placehold.co/1600x400/2e7d5e/white?text=Cookie+Ethics+%26+Digital+Soil');
+            background-size: cover;
+            background-position: center 30%;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 42px;
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2.2rem;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 1.5rem;
+        }
+
+        .policy-section h2 {
+            color: var(--deep-green);
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .policy-section h3 {
+            color: var(--mid-green);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .policy-section p, .policy-section li {
+            color: #2c4d3b;
+            margin-bottom: 0.7rem;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-radius: 28px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 6px solid var(--accent-gold);
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            background: #fefcf0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .cookie-table th, .cookie-table td {
+            border: 1px solid #d6e2ce;
+            padding: 12px 16px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .cookie-table th {
+            background-color: var(--soft-green);
+            color: var(--deep-green);
+            font-weight: 600;
+        }
+        .badge-date {
+            background: var(--soft-green);
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            color: var(--deep-green);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .consent-panel {
+            background: #fff6ea;
+            border-radius: 32px;
+            padding: 1.5rem;
+            margin: 1.8rem 0;
+            border: 1px solid var(--accent-gold);
+            text-align: center;
+        }
+        .btn-cookie-pref {
+            background: var(--mid-green);
+            color: white;
+            border: none;
+            padding: 12px 26px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0.5rem;
+        }
+        .btn-cookie-pref:hover {
+            background: var(--deep-green);
+            transform: translateY(-2px);
+        }
+        .btn-outline-pref {
+            background: transparent;
+            border: 2px solid var(--mid-green);
+            color: var(--mid-green);
+        }
+        .btn-outline-pref:hover {
+            background: var(--mid-green);
+            color: white;
+        }
+
+        .footer {
+            background: var(--deep-green);
+            color: #ddd;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+        .footer-info a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #3a6b4e;
+            padding-top: 1rem;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--mid-green);
+            color: white;
+            border-radius: 60px;
+            padding: 0.6rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.2s;
+            z-index: 99;
+        }
+        .back-to-top:hover {
+            background: var(--deep-green);
+            transform: translateY(-3px);
+        }
+        @media (max-width: 850px) {
+            .nav-links {
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .policy-section {
+                padding-left: 1rem;
+            }
+            .cookie-table th, .cookie-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Yard<span>Alchemy</span> Botanicals</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="active-nav">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>🍪 Cookies Policy · Digital Seed Ethics</h1>
+    <p>Minimal, transparent, and always in service to your experience. Just like companion planting, we place only what's beneficial — no invasive tracking, no hidden harvest.</p>
+</section>
+
+<div class="container">
+    <div class="policy-card">
+        <div class="badge-date">🌾 Last Amended: April 15, 2025 · Rooted version 2.1</div>
+        <p style="font-size:1.05rem; margin-bottom:1.5rem;">At YardAlchemy Botanicals, we believe that digital consent should be as clear as asking a fellow gardener before stepping into their sacred space. This Cookies Policy explains what cookies are, which ones we use, how they support your journey, and how you can manage your preferences. Our goal: nourish your visit without overharvesting your data.</p>
+        
+        <div class="policy-section">
+            <h2>🌿 1. What Are Cookies? (The Tiny Plant Analogies)</h2>
+            <p>Cookies are small text files stored on your device (computer, tablet, or phone) when you visit a website. Think of them as little biodegradable markers — like a herbal tag that helps us remember your preferences or understand how our digital garden grows. They are not harmful, and they cannot carry viruses or install software. We use only first-party and strictly vetted anonymous cookies.</p>
+            <div class="highlight-box">
+                🌻 <strong>Our philosophy:</strong> No third-party tracking cookies for advertising. No ‘evercookies’. No selling of cookie data. We treat each cookie like a seed — only sow what is necessary and respectful.
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌱 2. Types of Cookies We Nurture</h2>
+            <p>To keep YardAlchemy Botanicals thriving and user-friendly, we separate our cookies into three essential categories — each with a clear purpose:</p>
+            <table class="cookie-table">
+                <thead>
+                    <tr><th>Cookie Family</th><th>Purpose</th><th>Examples & Lifespan</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>🌿 Essential (Strictly Necessary)</strong></td>
+                        <td>Required for core site functionality: form submissions, cart operations (if applicable), security checks, and session management. Cannot be disabled without breaking the experience.</td>
+                        <td>session_id, csrf_token. Expire when you close browser or within a few hours.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🍃 Preference & Functional</strong></td>
+                        <td>Remember your choices such as language preference, region, or if you've dismissed a notification. Enhances convenience.</td>
+                        <td>user_lang, region_pref. Persistent up to 12 months.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>📊 Anonymized Analytics</strong></td>
+                        <td>Help us understand aggregate traffic patterns, popular pages, and user flow — all via privacy-forward analytics (IP anonymized, no cross-site tracking). Improves our content just like crop rotation.</td>
+                        <td>_ga (anonymized), _gid (first-party, aggregated). Lifespan: 24 hours to 2 years, but no personal identifiers.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><em>Note:</em> We do NOT deploy advertising cookies, social media trackers, or any fingerprinting technologies. Your digital footprint remains yours.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🍂 3. How We Use Cookie Information</h2>
+            <p>Information collected via cookies helps us tend to our botanical web presence:</p>
+            <ul>
+                <li>Ensure the website works reliably (keep you logged in during checkout for herbal orders).</li>
+                <li>Analyze which plant remedies or workshops are most engaging — so we can create more relevant content.</li>
+                <li>Detect and prevent security issues (like bots attempting to abuse forms).</li>
+                <li>Remember your cookie preferences for future visits, avoiding repeated consent banners (when you’ve already chosen).</li>
+            </ul>
+            <p>All analytics data is aggregated and never tied back to your name, email, or specific identity. Our analytics provider processes data under strict data protection terms and cannot resell any information.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌾 4. Your Consent & Cookie Management (Digital Sovereignty)</h2>
+            <p>When you first visit YardAlchemy Botanicals, you will see a small cookie banner asking for your permission — except for strictly necessary cookies that keep the site operational. You can customize your preferences anytime using the "Cookie Preferences" button below or via our floating consent tool. Granting consent is optional, and you can withdraw it without any penalty.</p>
+            <div class="consent-panel" id="cookieConsentPanel">
+                <p style="font-weight:bold; margin-bottom:12px;">🍪 Manage Your Cookie Preferences Instantly</p>
+                <p style="font-size:0.9rem;">Choose which categories to enable (excluding essential cookies which are always active for site safety).</p>
+                <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:18px;">
+                    <button id="allowFunctionalBtn" class="btn-cookie-pref">✅ Allow Functional & Analytics</button>
+                    <button id="allowNecessaryOnlyBtn" class="btn-cookie-pref btn-outline-pref">🌿 Necessary Cookies Only</button>
+                    <button id="resetCookiePrefBtn" class="btn-cookie-pref btn-outline-pref">⟳ Reset Preferences</button>
+                </div>
+                <p style="font-size:0.8rem; margin-top:18px;">Your choice will be stored for 12 months. You can change your mind anytime — we respect every leaf of your choice.</p>
+            </div>
+            <p>You can also disable cookies via your browser settings (e.g., Chrome, Firefox, Safari). However, disabling essential cookies may cause parts of the site to malfunction (like booking forms or login areas).</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌼 5. Third-Party Services & Embedded Content</h2>
+            <p>We occasionally embed content from trusted partners — such as a YouTube video about herbal distillation or an open source calendar for workshops. These third parties may set their own cookies if you interact with the embedded content. However, we do not load trackers without your explicit interaction (no automatic tracking). We vet all third-parties to ensure they align with our ethical data pledge.</p>
+            <ul>
+                <li><strong>Payment gateways:</strong> Stripe / PayPal may set cookies during checkout — these are essential for transaction security but are strictly limited.</li>
+                <li><strong>Open source tools:</strong> Our contact forms and email signup are cookie-light (no cross-device tracking).</li>
+            </ul>
+            <p>If you have concerns, we recommend reviewing the privacy policies of those third parties. YardAlchemy Botanicals is not responsible for external cookie practices, but we select partners with care.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌻 6. Cookie Lifespan & Data Retention (Seasonal Cycles)</h2>
+            <p>Our cookies respect natural cycles:</p>
+            <ul>
+                <li><strong>Session cookies</strong> expire when you close your browser — ephemeral like morning dew.</li>
+                <li><strong>Persistent cookies</strong> remain for up to 12 months, after which they automatically expire or renew based on renewed consent. We never use permanent tracking mechanisms.</li>
+                <li>Analytics identifiers are anonymized and rolled up every 14 months; raw logs are deleted regularly.</li>
+            </ul>
+            <div class="highlight-box">
+                🕊️ <strong>Transparency first:</strong> You can always clear cookies via your browser settings at any time. For more guidance, visit aboutcookies.org. Should you wish to erase any cookie data we store server-side (like preferences), just email privacy@yardalchemybotanicals.com.
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>🍃 7. Do Not Track (DNT) Signals</h2>
+            <p>Our website honors Do Not Track browser settings. If your browser sends a DNT signal, we automatically disable all non-essential cookies and analytics — leaving only strictly necessary ones. We believe in aligning technology with user intent. You can enable DNT in your browser settings (often found under privacy/security).</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>📜 8. Updates to This Cookies Policy</h2>
+            <p>As our digital garden evolves, this policy may be refreshed to reflect new practices or regulatory updates. If we make material changes (e.g., introducing new cookie types), we will notify you via a prominent banner or email alert at least 14 days in advance. The "Last Amended" date at the top always indicates the latest version. Your continued use after updates implies acceptance of the revised policy unless you withdraw consent.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌲 9. Children’s Privacy & Cookies</h2>
+            <p>We do not knowingly use cookies to track children under 13. Any analytics that could involve younger visitors is fully anonymized. If a parent or guardian has concerns about cookie storage related to a child, please contact us, and we will take appropriate measures to delete any residual data.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌿 10. Contact the Digital Soil Steward</h2>
+            <p>If you have any questions about our cookie practices, wish to access a list of cookies set on your device, or would like to exercise your rights, please reach out:</p>
+            <ul>
+                <li>🌱 Email: <strong>privacy@yardalchemybotanicals.com</strong> (Subject: Cookie Stewardship)</li>
+                <li>📬 Mail: YardAlchemy Botanicals — Attn: Privacy Office, 123 Green Haven Lane, Asheville, NC 28801</li>
+                <li>📞 Phone: (828) 555-2524 (Mon–Thu, 10am–3pm EST)</li>
+            </ul>
+            <p>We aim to respond within 10 business days. If you believe your cookie-related privacy rights have been infringed, you may lodge a complaint with your local supervisory authority. We treat every privacy inquiry like a delicate seedling — with careful attention.</p>
+        </div>
+
+        <div class="highlight-box" style="background:#eaf6e3;">
+            🌟 <strong>Sacred reminder:</strong> Your visits to our site are like walking through a botanical sanctuary — we notice footpaths to improve the garden, but we never follow you home. This cookie policy reflects our deep-rooted value of digital modesty. Thank you for trusting us.
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center; font-size: 0.85rem;">
+            <span style="background:var(--light-green); padding:0.3rem 1rem; border-radius:60px;">🔐 No cross-site tracking · No creepy ads · No selling data</span>
+        </div>
+    </div>
+
+    <!-- quick info cards  -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 0.5rem;">
+        <div style="background: white; border-radius: 60px; padding: 0.5rem 1rem; font-size: 0.85rem;"><span>🍪 Always first-party only</span></div>
+        <div style="background: white; border-radius: 60px; padding: 0.5rem 1rem; font-size: 0.85rem;"><span>⚖️ GDPR & CCPA Compliant (cookie consent)</span></div>
+        <div style="background: white; border-radius: 60px; padding: 0.5rem 1rem; font-size: 0.85rem;"><span>📉 Anonymized analytics (IP masked)</span></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>📍 YardAlchemy Botanicals – 123 Green Haven Lane, Asheville, NC 28801</p>
+            <p>📞 (828) 555-ALCHEMY (252-4369) | ✉️ contact@yardalchemybotanicals.com</p>
+        </div>
+        <div class="footer-info">
+            <p>🌱 Organic · Regenerative · Community-rooted</p>
+            <p>🌿 Cultivating green wisdom since 2012</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Privacy</a> | <a href="cookies.html">Cookies</a></p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 YardAlchemy Botanicals – All rights reserved. Digital soil ethics since first sprout.</p>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top" id="backToTopBtn">🌿 Back to Top</a>
+
+<script>
+    // Cookie preference management (simulated localStorage for demo)
+    // This demonstrates real interactive UX aligned with policy.
+    const FUNCTIONAL_KEY = 'yalchemy_functional_consent';
+    const ANALYTICS_KEY = 'yalchemy_analytics_consent';
+
+    function setCookiePreferences(functionalAllowed, analyticsAllowed) {
+        localStorage.setItem(FUNCTIONAL_KEY, functionalAllowed ? 'true' : 'false');
+        localStorage.setItem(ANALYTICS_KEY, analyticsAllowed ? 'true' : 'false');
+        // For demo: show a friendly console message & alert (could be replaced with toast)
+        let msg = `🌿 Cookie preferences updated. Functional: ${functionalAllowed ? 'ENABLED' : 'DISABLED'} | Analytics: ${analyticsAllowed ? 'ENABLED' : 'DISABLED'}. Essential cookies always active.`;
+        alert(msg);
+        // In a real implementation, you would also enable/disable analytics scripts accordingly.
+        // Here we simulate a DOM message for transparency.
+        const notifyDiv = document.createElement('div');
+        notifyDiv.innerText = msg;
+        notifyDiv.style.position = 'fixed';
+        notifyDiv.style.bottom = '80px';
+        notifyDiv.style.right = '20px';
+        notifyDiv.style.backgroundColor = '#1e4a2f';
+        notifyDiv.style.color = 'white';
+        notifyDiv.style.padding = '10px 18px';
+        notifyDiv.style.borderRadius = '40px';
+        notifyDiv.style.fontSize = '0.8rem';
+        notifyDiv.style.zIndex = '999';
+        notifyDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        document.body.appendChild(notifyDiv);
+        setTimeout(() => { notifyDiv.remove(); }, 3000);
+    }
+
+    // Load initial state based on localStorage (default both enabled for demo but user can opt out)
+    // According to policy, defaults: functional + analytics optional via consent. For demonstration,
+    // if never set, first visit we treat as "implied functional/analytics" but we allow change.
+    // However to respect user, if localStorage empty we set default to 'true' for both (non-essential allowed unless declined)
+    // This matches initial consent banner assumption (user can immediately customize).
+    if (localStorage.getItem(FUNCTIONAL_KEY) === null) {
+        localStorage.setItem(FUNCTIONAL_KEY, 'true');
+    }
+    if (localStorage.getItem(ANALYTICS_KEY) === null) {
+        localStorage.setItem(ANALYTICS_KEY, 'true');
+    }
+
+    // Buttons
+    const allowFunctionalBtn = document.getElementById('allowFunctionalBtn');
+    const allowNecessaryOnlyBtn = document.getElementById('allowNecessaryOnlyBtn');
+    const resetCookiePrefBtn = document.getElementById('resetCookiePrefBtn');
+
+    if (allowFunctionalBtn) {
+        allowFunctionalBtn.addEventListener('click', () => {
+            setCookiePreferences(true, true);
+        });
+    }
+    if (allowNecessaryOnlyBtn) {
+        allowNecessaryOnlyBtn.addEventListener('click', () => {
+            setCookiePreferences(false, false);
+        });
+    }
+    if (resetCookiePrefBtn) {
+        resetCookiePrefBtn.addEventListener('click', () => {
+            setCookiePreferences(true, true); // reset to default (both allowed)
+        });
+    }
+
+    // smooth back to top
+    const backButton = document.getElementById('backToTopBtn');
+    if (backButton) {
+        backButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // navigation active state based on current file
+    const currentPath = window.location.pathname.split("/").pop() || "cookies.html";
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (href === 'cookies.html' && currentPath === 'cookies.html')) {
+            link.classList.add('active-nav');
+            link.style.color = 'var(--accent-gold)';
+        }
+    });
+
+    // optional hash smooth
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

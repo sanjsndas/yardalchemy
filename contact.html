@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>YardAlchemy Botanicals | Contact & Cultivate</title>
+    <meta name="description" content="Connect with YardAlchemy Botanicals. Reach our herbalists, book consultations, visit our nursery, or send us a message. Let's grow together.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables (matching main site) */
+        :root {
+            --deep-green: #1e4a2f;
+            --mid-green: #2e7d5e;
+            --soft-green: #9dc88d;
+            --light-green: #e2f0d9;
+            --accent-gold: #d4a373;
+            --soil-brown: #7f5539;
+            --white-smoke: #fefae0;
+        }
+
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30,74,47,0.92), rgba(46,125,94,0.85)), url('https://placehold.co/1600x400/2e7d5e/white?text=Connect+with+Nature');
+            background-size: cover;
+            background-position: center 30%;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--deep-green);
+            border-left: 6px solid var(--accent-gold);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info-card {
+            background: white;
+            border-radius: 32px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-detail {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-detail .icon {
+            font-size: 1.8rem;
+            background: var(--light-green);
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-green);
+        }
+
+        .contact-detail h3 {
+            color: var(--mid-green);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-detail p, .contact-detail a {
+            color: #2c5a47;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent-gold);
+        }
+
+        .hours-list {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .hours-list li {
+            padding: 0.3rem 0;
+            border-bottom: 1px dashed #e0e6d8;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 32px;
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--deep-green);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #cbdcc7;
+            border-radius: 48px;
+            font-family: inherit;
+            background: var(--white-smoke);
+            transition: 0.2s;
+        }
+
+        textarea {
+            border-radius: 28px;
+            resize: vertical;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+        }
+
+        .btn-submit {
+            background: var(--mid-green);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-submit:hover {
+            background: var(--deep-green);
+            transform: scale(1.02);
+        }
+
+        .map-section {
+            background: #e2efda;
+            border-radius: 32px;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        .map-placeholder {
+            background: #b6cfaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3rem;
+            text-align: center;
+            color: var(--deep-green);
+        }
+
+        .faq-mini {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            color: var(--soil-brown);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: var(--deep-green);
+            color: #ddd;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-info a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #3a6b4e;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 850px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Yard<span>Alchemy</span> Botanicals</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active-link" style="color: var(--accent-gold);">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>🌿 Branch Out & Connect</h1>
+    <p>Reach out to our team of herbalists and garden stewards. Whether you need a consultation, have a question about soil alchemy, or just want to say hello — we’re rooted in community.</p>
+</section>
+
+<div class="container">
+    <!-- Contact main grid: left side info + right side form -->
+    <div class="contact-grid">
+        <!-- left: contact information, hours, location -->
+        <div class="contact-info-card">
+            <h2 style="color: var(--deep-green); margin-bottom: 1.5rem;">🌱 Meet us in the garden</h2>
+            <div class="contact-detail">
+                <div class="icon">📍</div>
+                <div>
+                    <h3>Visit Our Apothecary Nursery</h3>
+                    <p>123 Green Haven Lane, Asheville, NC 28801<br>Nestled in the blue ridge foothills — follow the scent of lavender.</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">📞</div>
+                <div>
+                    <h3>Root Call Line</h3>
+                    <p><a href="tel:+18285552569">(828) 555-ALCHEMY (252-4369)</a><br>Mon–Fri 9am–5pm EST</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">✉️</div>
+                <div>
+                    <h3>Digital Soil & Herbal Inquiries</h3>
+                    <p><a href="mailto:hello@yardalchemybotanicals.com">hello@yardalchemybotanicals.com</a><br>We reply within 2 business sun-cycles.</p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">⏰</div>
+                <div>
+                    <h3>Nursery & Garden Hours</h3>
+                    <ul class="hours-list">
+                        <li>🌿 Wednesday – Friday: 10am – 5pm</li>
+                        <li>🌻 Saturday: 9am – 6pm (Workshop days extended)</li>
+                        <li>🍂 Sunday: 11am – 4pm (Apothecary tea & tours)</li>
+                        <li>🌙 Monday & Tuesday: Closed for garden magic & soil regeneration</li>
+                    </ul>
+                    <p style="margin-top: 8px;"><em>Guided forest garden tours every Saturday at 11am – no registration needed.</em></p>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="icon">🌐</div>
+                <div>
+                    <h3>Wild Roots Social</h3>
+                    <p>Instagram & YouTube: <strong>@YardAlchemyBotanicals</strong><br>Weekly plant ID reels + live Q&A each Thursday.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- right side: contact form (functional with basic sanitation) -->
+        <div class="form-card">
+            <h2 style="color: var(--deep-green); margin-bottom: 0.5rem;">📬 Send a Message</h2>
+            <p style="margin-bottom: 1.5rem;">Ask about workshops, consulting, seed libraries, or simply share your garden story. We’d love to grow alongside you.</p>
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full name *</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Willow Greenfield">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address *</label>
+                    <input type="email" id="email" name="email" required placeholder="hello@ecogarden.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="consultation">🌾 Consultation / Permaculture Design</option>
+                        <option value="workshop">🍄 Workshop or Course Registration</option>
+                        <option value="nursery">🌱 Nursery & Plant Availability</option>
+                        <option value="partnership">🤝 Partnership / Volunteer</option>
+                        <option value="other">✨ Other Enchanting Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your message * (share your botanical dreams)</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your space, zone, or magical gardening vision..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="preferredContact">Preferred contact way</label>
+                    <select id="preferredContact" name="preferredContact">
+                        <option value="email">Email (fastest)</option>
+                        <option value="phone">Phone call</option>
+                        <option value="carrier_pigeon">Carrier Pigeon (just for fun, we’ll email)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">✨ Send Garden Message ✨</button>
+                <p style="font-size: 0.75rem; margin-top: 1rem; color: #5e7b5a;">By sending, you agree to our green privacy practices. We never share your data — just compost it into good energy.</p>
+            </form>
+            <div id="formStatus" style="margin-top: 1rem; font-weight: 500;"></div>
+        </div>
+    </div>
+
+    <!-- Map & location highlight (with interactive placeholder, but fully styled) -->
+    <div class="map-section">
+        <div class="map-placeholder">
+            <span style="font-size: 3rem;">🗺️🌻</span>
+            <h3 style="margin: 0.5rem 0;">Find Our Sanctuary</h3>
+            <p>123 Green Haven Lane, Asheville, NC — nestled between the French Broad River and ancient oak groves.<br>We are across from the farmers market. Come breathe the herbal air!</p>
+            <div style="background: var(--deep-green); color: white; padding: 0.5rem 1rem; border-radius: 40px; display: inline-block; margin-top: 10px;">📍 Directions: Follow signs for “Botanical Alchemy Lane”</div>
+            <p style="margin-top: 1rem; font-size: 0.85rem;"><em>Wheelchair accessible garden beds · sensory-friendly hours Wed mornings.</em></p>
+        </div>
+    </div>
+
+    <!-- Frequently asked questions - helpful for quick info -->
+    <h2 class="section-title" style="margin-top: 2.5rem;">🌼 Roots & Inquiries — FAQs</h2>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <h4>🌿 Do you offer virtual consultations?</h4>
+            <p>Absolutely! Our garden alchemists conduct zoom sessions for permaculture design, soil coaching, and garden mapping worldwide. Just select “consultation” in the form.</p>
+        </div>
+        <div class="faq-item">
+            <h4>🌻 Can I volunteer in the nursery?</h4>
+            <p>Yes — we host “Green Hands” volunteer days every first Saturday. Help with seed starting, composting, and plant propagation. Send a message to join our guild!</p>
+        </div>
+        <div class="faq-item">
+            <h4>🍃 Do you ship seeds and plants?</h4>
+            <p>We ship heirloom seeds and dried herbs nationwide (USA). Live plants local pickup only. Check our online shop or email for seasonal availability.</p>
+        </div>
+        <div class="faq-item">
+            <h4>📚 What workshops are coming?</h4>
+            <p>“Mushroom Log Inoculation” on April 12, “Herbal Salve Making” on April 26, and “No-Dig Revolution” May 10. Subscribe to our newsletter via contact form!</p>
+        </div>
+    </div>
+
+    <!-- Additional herbalist contact / emergency plant care note -->
+    <div style="background: var(--light-green); border-radius: 28px; padding: 1.5rem; text-align: center; margin: 2rem 0;">
+        <p style="font-size: 1.1rem;"><strong>🌿 Need quick plant diagnosis or garden emergency?</strong> Join our live “Plant ER” Instagram session every Tuesday 4pm EST — or drop an email with images to <strong>plantclinic@yardalchemybotanicals.com</strong>. We read every leaf signal.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>📍 YardAlchemy Botanicals – 123 Green Haven Lane, Asheville, NC 28801</p>
+            <p>📞 (828) 555-ALCHEMY (252-4369) | ✉️ contact@yardalchemybotanicals.com</p>
+        </div>
+        <div class="footer-info">
+            <p>🌱 Organic · Regenerative · Community-rooted</p>
+            <p>🌿 Cultivating green wisdom since 2012</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 YardAlchemy Botanicals – Every connection enriches the soil. Let’s grow together.</p>
+    </div>
+</footer>
+
+<!-- JavaScript for form handling + toast simulation (no actual backend, but shows submission success with demo) -->
+<script>
+    (function() {
+        const contactForm = document.getElementById('contactForm');
+        const statusDiv = document.getElementById('formStatus');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Get form fields for validation & feedback
+                const name = document.getElementById('name')?.value.trim();
+                const email = document.getElementById('email')?.value.trim();
+                const message = document.getElementById('message')?.value.trim();
+
+                if (!name || !email || !message) {
+                    statusDiv.innerHTML = '<span style="color: #b23c1c;">🌿 Please fill out your name, email, and message — nature requires the essentials.</span>';
+                    statusDiv.style.padding = '0.5rem';
+                    return;
+                }
+                if (!email.includes('@') || !email.includes('.')) {
+                    statusDiv.innerHTML = '<span style="color: #b23c1c;">✉️ That doesn’t look like a rooted email address. Please check again.</span>';
+                    return;
+                }
+
+                // Simulate sending (demo only — would normally be a fetch to server)
+                const submitBtn = contactForm.querySelector('.btn-submit');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Sending...';
+                submitBtn.disabled = true;
+
+                // Simulate network delay & successful "send"
+                setTimeout(() => {
+                    // In real environment, you'd POST to a backend endpoint.
+                    // For demo/static, we just show success msg and reset form optionally.
+                    statusDiv.innerHTML = '<span style="color: #1e4a2f;">✨ Thank you, ' + escapeHtml(name) + '! Your message has been planted. Our herbal alchemist will reply within 2 days. Meanwhile, breathe deep and hug a leaf. ✨</span>';
+                    statusDiv.style.padding = '0.75rem';
+                    statusDiv.style.backgroundColor = '#e2f0d9';
+                    statusDiv.style.borderRadius = '40px';
+                    statusDiv.style.marginTop = '0.8rem';
+                    contactForm.reset();   // optional reset
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Clear status after 9 seconds but keep friendly
+                    setTimeout(() => {
+                        if (statusDiv) {
+                            statusDiv.style.transition = '0.5s';
+                            statusDiv.style.opacity = '0.8';
+                        }
+                    }, 8000);
+                }, 1200);
+            });
+        }
+
+        // helper to avoid XSS in status message
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+                return c;
+            });
+        }
+        
+        // smooth scroll for any anchor links (if needed for internal consistency)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElem = document.querySelector(targetId);
+                    if (targetElem) {
+                        e.preventDefault();
+                        targetElem.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>

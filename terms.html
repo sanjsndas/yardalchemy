@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>YardAlchemy Botanicals | Terms of Service – Garden Ethos & Usage</title>
+    <meta name="description" content="Terms & Conditions for YardAlchemy Botanicals. Please review our guidelines for using our website, workshops, and community spaces. Regenerative agreements rooted in respect.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        :root {
+            --deep-green: #1e4a2f;
+            --mid-green: #2e7d5e;
+            --soft-green: #9dc88d;
+            --light-green: #e2f0d9;
+            --accent-gold: #d4a373;
+            --soil-brown: #7f5539;
+            --white-smoke: #fefae0;
+        }
+
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .legal-hero {
+            background: linear-gradient(115deg, #1e4a2fee, #2e7d5edd), url('https://placehold.co/1600x400/2e7d5e/white?text=Regenerative+Agreements') center/cover no-repeat;
+            min-height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .legal-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .terms-paper {
+            background: white;
+            border-radius: 36px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+            margin: 1rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            color: var(--deep-green);
+            border-left: 6px solid var(--accent-gold);
+            padding-left: 1rem;
+            margin: 2rem 0 1.2rem 0;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .terms-paper h3 {
+            color: var(--mid-green);
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.7rem 0;
+        }
+
+        .terms-paper h4 {
+            color: var(--soil-brown);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 1.2rem 0 0.4rem 0;
+        }
+
+        .terms-paper p {
+            margin-bottom: 1rem;
+        }
+
+        .terms-paper ul, .terms-paper ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+        }
+
+        .terms-paper li {
+            margin-bottom: 0.4rem;
+        }
+
+        .legal-highlight {
+            background: var(--light-green);
+            padding: 1.2rem;
+            border-radius: 24px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .effective-date {
+            font-style: italic;
+            background: #f9f2e0;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background: var(--deep-green);
+            color: white;
+            border-radius: 40px;
+            padding: 0.6rem 1.6rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: 0.2s;
+        }
+
+        .btn-back:hover {
+            background: var(--mid-green);
+        }
+
+        footer {
+            background: var(--deep-green);
+            color: #ddd;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-info a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #3a6b4e;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            .terms-paper {
+                padding: 1.5rem;
+            }
+            .legal-hero h1 {
+                font-size: 1.9rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Yard<span>Alchemy</span> Botanicals</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="legal-hero">
+    <div>
+        <h1>📜 Terms of Stewardship</h1>
+        <p>Our garden agreement: how we cultivate trust, transparency, and mutual respect with our community.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="terms-paper">
+        <div class="effective-date">🌿 Effective: April 24, 2026 | Last amended: Spring Equinox 2026</div>
+        <p>Welcome to YardAlchemy Botanicals ("we", "us", "our"). By accessing our website, participating in workshops, purchasing products, or engaging with our content, you agree to be bound by these Terms & Conditions. Just as a thriving soil food web requires balanced relationships, our terms ensure a healthy and ethical ecosystem for everyone. Please read with care.</p>
+
+        <h2 class="section-title">🌾 1. Our Living Agreement</h2>
+        <p>These Terms apply to all interactions with YardAlchemy Botanicals, including but not limited to: website browsing, newsletter subscriptions, course registrations, retail sales (seeds, plants, merchandise), on-site farm visits, and digital downloads (e-books, almanacs). By using any part of our services, you affirm that you are at least 18 years old or accessing under parental guidance with legal capacity.</p>
+
+        <div class="legal-highlight">
+            🌱 <strong>Rooted Ethos:</strong> We operate on regenerative principles, not legalese loopholes. These terms are written in plain language to align with our values of honesty, ecological responsibility, and community care.
+        </div>
+
+        <h2 class="section-title">📦 2. Products, Seeds & Living Goods</h2>
+        <h3>2.1 Plant material & heirloom seeds</h3>
+        <p>We offer organically grown seeds, live plants, cuttings, and soil amendments. Due to the perishable and living nature of these products, we cannot accept returns on seeds or plants once opened or 7 days after delivery. If your seeds or plants arrive damaged or in poor condition <strong>within 48 hours</strong>, send photos to <strong>grow@yardalchemybotanicals.com</strong> and we will replace or refund at our discretion. We guarantee genetic purity and germination rates as described, but we cannot control growing conditions beyond our nursery.</p>
+        
+        <h3>2.2 Workshops & digital products</h3>
+        <p>Registration for in-person or online courses is non-refundable within 7 days of the start date, but you may transfer your seat to another person. Digital products (PDFs, video courses) are non-refundable once accessed. Cancellations made 14+ days before a workshop receive a full refund minus a 10% administration fee.</p>
+
+        <h3>2.3 Pricing & availability</h3>
+        <p>All prices are listed in USD. We reserve the right to adjust pricing or discontinue items without prior notice. We strive for accuracy, but errors may occur – if we discover a pricing mistake on an item you ordered, we’ll inform you and offer cancellation or adjusted cost.</p>
+
+        <h2 class="section-title">🚚 3. Shipping & Garden Pickup</h2>
+        <p>We ship within the contiguous United States via compostable and recycled packaging. Live plants are shipped Monday–Wednesday to avoid weekend delays. Shipping costs are calculated at checkout. You assume risk of loss for live goods once handed to carrier, but if damage occurs due to packaging failure, we will replace. Local pickup is available at our Asheville nursery: you must select a time slot and wear closed-toe shoes.</p>
+        <p><strong>Important:</strong> For environmental stewardship, we do not ship synthetic products or invasive species. All shipments abide by state phytosanitary regulations.</p>
+
+        <h2 class="section-title">💚 4. Community & Conduct Guidelines</h2>
+        <p>Our on-site and online spaces are sacred – we welcome kindness, anti-racism, and ecological curiosity. By joining a workshop, social media group, or commenting on our blog, you agree to:</p>
+        <ul>
+            <li>Engage without harassment, hate speech, or disruptive behavior</li>
+            <li>Respect intellectual property: do not republish our course materials or proprietary growing guides without written permission</li>
+            <li>Share gardening wisdom generously but avoid medical advice claims – YardAlchemy Botanicals does not diagnose or treat illnesses</li>
+            <li>Follow safety protocols on the farm: no smoking, no littering, leashed dogs only in designated areas</li>
+        </ul>
+        <p>We reserve the right to restrict access or ban any user who violates these standards, without refund of workshop fees.</p>
+
+        <h2 class="section-title">⚖️ 5. Intellectual Soil (Copyright & Use)</h2>
+        <p>All content on this website – including text, graphics, logos, course videos, planting calendars, illustrations – is the property of YardAlchemy Botanicals or our contributors and is protected by copyright laws. You may download or print a single copy for personal, non-commercial use (e.g., building your own raised bed). However, you may not reproduce, distribute, or create derivative works without our explicit consent. For permissions, contact <strong>hello@yardalchemybotanicals.com</strong>.</p>
+        <p>The phrase "Green Alchemy", "Living Soil Guild", and our logo are trademarks. Unauthorized use may result in legal action to protect our regenerative identity.</p>
+
+        <h2 class="section-title">🌿 6. Disclaimer of Warranties & Health Information</h2>
+        <div class="legal-highlight">
+            <strong>🌻 For Educational & Inspirational Purposes Only</strong><br>
+            The information provided on this website, in our guides, and during workshops is for general botanical and gardening education. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding a medical condition. Never disregard professional medical advice because of something you have read on our site. Herbal uses are based on traditional knowledge and emerging research; individual reactions may vary. Use plants at your own risk – test for allergies.
+        </div>
+        <p>Our products (seeds, plants, compost) are sold as-is without warranties beyond those required by law. We do not guarantee specific crop yields, pest resistance, or growing success due to variable environmental factors.</p>
+
+        <h2 class="section-title">📱 7. Third-Party Links & Digital Tools</h2>
+        <p>Our site may link to external partners (e.g., organic tool suppliers, permaculture forums) for your convenience. We are not responsible for content, privacy practices, or terms of those websites. Your interactions with third parties are solely between you and them.</p>
+
+        <h2 class="section-title">💸 8. Limitation of Liability</h2>
+        <p>To the maximum extent allowed by law, YardAlchemy Botanicals and its team shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of our goods, workshops, or website – including crop loss, allergic reactions, or personal injury while gardening. Our total liability for any claim shall not exceed the amount paid by you for the specific product or service.</p>
+        <p>You assume full responsibility for safe gardening practices: using tools properly, washing produce, and consulting experts before ingesting unfamiliar herbs.</p>
+
+        <h2 class="section-title">🔄 9. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless YardAlchemy Botanicals, its owners, employees, and volunteers from any claims, damages, losses, or expenses (including legal fees) arising from your breach of these Terms or violation of any law or third-party rights.</p>
+
+        <h2 class="section-title">📬 10. Modifications & Communication</h2>
+        <p>We may update these Terms from time to time to reflect changes in our practices or legal requirements. The revised version will be posted with an updated "Effective Date". Continuing to use our services after changes constitutes acceptance. We will notify material changes via email or site banner. For any questions, reach out to <strong>legal@yardalchemybotanicals.com</strong>.</p>
+
+        <h2 class="section-title">🌍 11. Governing Law & Dispute Resolution</h2>
+        <p>These Terms shall be governed by the laws of North Carolina, without regard to conflict of laws. Any dispute arising out of these Terms or your use of our services shall first attempt to be resolved through good-faith mediation (we are happy to join a community circle). If unresolved, exclusive jurisdiction lies in the state or federal courts of Buncombe County, North Carolina.</p>
+
+        <h2 class="section-title">🤝 12. Miscellaneous Provisions</h2>
+        <p>If any provision of these Terms is found to be unenforceable, the remaining provisions remain in full effect. Our failure to enforce any right or provision does not waive that right. These Terms constitute the entire agreement between you and YardAlchemy Botanicals regarding the subject matter hereof, superseding any prior agreements.</p>
+
+        <div class="legal-highlight">
+            🌟 <strong>Green Pledge:</strong> Just as mycelium networks support forest health, we believe consent and transparency support community health. Thank you for being part of our regenerative journey – from our soil to your soul.
+        </div>
+
+        <p style="margin-top: 2rem;">For any questions about these Terms or our regenerative commitment, please contact:</p>
+        <p>📧 <strong>YardAlchemy Botanicals – Legal Stewardship</strong><br>
+        123 Green Haven Lane, Asheville, NC 28801<br>
+        Email: <a href="mailto:legal@yardalchemybotanicals.com" style="color: var(--mid-green);">legal@yardalchemybotanicals.com</a><br>
+        Phone: (828) 555-ALCHEMY (252-4369)</p>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="index.html" class="btn-back">← Return to Home Garden</a>
+            <a href="privacy.html" class="btn-back" style="background: var(--accent-gold); color: var(--deep-green); margin-left: 0.8rem;">Read Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- Additional note about community agreements (short) -->
+    <div style="background: var(--light-green); border-radius: 28px; padding: 1.2rem 2rem; text-align: center; margin: 1rem 0;">
+        <p>🌻 <strong>Seedling Pledge:</strong> YardAlchemy Botanicals honors the traditional lands of the Cherokee and Catawba peoples. We are committed to regenerative land justice and ongoing reciprocity. By using our site and services, you acknowledge this ancestral stewardship.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>📍 YardAlchemy Botanicals – 123 Green Haven Lane, Asheville, NC 28801</p>
+            <p>📞 (828) 555-ALCHEMY (252-4369) | ✉️ contact@yardalchemybotanicals.com</p>
+        </div>
+        <div class="footer-info">
+            <p>🌱 Organic · Regenerative · Community-rooted</p>
+            <p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a></p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 YardAlchemy Botanicals – Cultivating green wisdom since 2012. Rooted in reciprocity. These terms are part of our living agreement.</p>
+    </div>
+</footer>
+
+<script>
+    // smooth scroll for internal links if any anchors exist
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== "#") {
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

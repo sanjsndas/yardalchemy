@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>YardAlchemy Botanicals | Terms of Privacy & Data Stewardship</title>
+    <meta name="description" content="YardAlchemy Botanicals privacy practices: how we nurture your data, protect your personal information, and honor digital boundaries with the same care as living soil.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables (harmonized with main site) */
+        :root {
+            --deep-green: #1e4a2f;
+            --mid-green: #2e7d5e;
+            --soft-green: #9dc88d;
+            --light-green: #e2f0d9;
+            --accent-gold: #d4a373;
+            --soil-brown: #7f5539;
+            --white-smoke: #fefae0;
+        }
+
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active-nav {
+            color: var(--accent-gold);
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, rgba(30,74,47,0.92), rgba(46,125,94,0.85)), url('https://placehold.co/1600x400/2e7d5e/white?text=Digital+Soil+Ethics');
+            background-size: cover;
+            background-position: center 30%;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 42px;
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2.2rem;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 1.5rem;
+        }
+
+        .policy-section h2 {
+            color: var(--deep-green);
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .policy-section h3 {
+            color: var(--mid-green);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .policy-section p, .policy-section li {
+            color: #2c4d3b;
+            margin-bottom: 0.7rem;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-radius: 28px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border-left: 6px solid var(--accent-gold);
+        }
+
+        .badge-date {
+            background: var(--soft-green);
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            color: var(--deep-green);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: var(--deep-green);
+            color: #ddd;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-info a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #3a6b4e;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 850px) {
+            .nav-links {
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .policy-section {
+                padding-left: 1rem;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--mid-green);
+            color: white;
+            border-radius: 60px;
+            padding: 0.6rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.2s;
+            z-index: 99;
+        }
+        .back-to-top:hover {
+            background: var(--deep-green);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Yard<span>Alchemy</span> Botanicals</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html" class="active-nav">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>📜 Terms of Privacy & Digital Soil Ethics</h1>
+    <p>Your personal data is handled with the same reverence we give heirloom seeds. Rooted in transparency, respect, and ecological consent.</p>
+</section>
+
+<div class="container">
+    <div class="policy-card">
+        <div class="badge-date">🌿 Last Amended: April 15, 2025 · Version 2.1</div>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;"><strong>Welcome to YardAlchemy Botanicals.</strong> These Terms of Privacy ("Privacy Commitment") describe how we collect, use, store, and protect your personal information when you visit our website, book consultations, subscribe to our newsletters, or interact with our botanical community. We align our digital practices with regenerative principles: minimal extraction, clear purpose, and nourishing feedback loops.</p>
+        
+        <div class="policy-section">
+            <h2>🌱 1. Information We Gather (The Seeds We Collect)</h2>
+            <p>Just as a garden only takes what it needs from the soil, we collect only the information essential to serve you and grow our community. Categories include:</p>
+            <ul>
+                <li><strong>Identifying information:</strong> name, email address, phone number, postal address (when placing orders or signing up for workshops).</li>
+                <li><strong>Correspondence data:</strong> messages sent through our contact forms, consultation requests, or Plant ER emails.</li>
+                <li><strong>Usage & analytics:</strong> we may gather aggregated, anonymized data about how visitors interact with our site (pages visited, time spent) to improve our herbal resources — never sold, always composted thoughtfully.</li>
+                <li><strong>Transactional records:</strong> information related to plant purchases, event registrations, or donations (processed via secure third parties, never storing full payment details).</li>
+            </ul>
+            <div class="highlight-box">
+                🌼 <strong>Our Promise:</strong> No raw data mining, no selling of personal info. We do not trade your digital footprint like a commodity. Your trust is our most fertile ground.
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌻 2. How We Root & Use Your Information</h2>
+            <p>Your data helps us cultivate meaningful experiences. We rely on legitimate interests, contractual necessity, and your consent where applicable:</p>
+            <ul>
+                <li>Respond to your messages, questions, and herbal consultations — connecting you with our alchemists.</li>
+                <li>Process orders, send workshop confirmations, and deliver seeds or remedies when applicable.</li>
+                <li>Send occasional “Green Notes” newsletters (only if you opt in). Every email contains an instant unsubscribe — no hard feelings, like a plant shedding old leaves.</li>
+                <li>Improve site accessibility, monitor security, and prevent digital pests (malicious bots, etc.).</li>
+                <li>Organize volunteer days or community plant swaps based on your expressed interests.</li>
+            </ul>
+            <p>We never intentionally collect data from children under 13 without parental consent. Our content is family-friendly but any child’s information requires verified guardian approval.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🍂 3. Sharing & Disclosure (The Pollination Principle)</h2>
+            <p>Your personal information is not for sale, rent, or trade. Limited sharing occurs only in scenarios that serve our mission and comply with law:</p>
+            <ul>
+                <li><strong>Trusted Service Partners:</strong> email platform (e.g., Mailchimp), payment processors (Stripe/PayPal), and website host. They must respect strict data protection standards.</li>
+                <li><strong>Legal obligations:</strong> if required by law, court order, or to protect the safety of YardAlchemy Botanicals, our visitors, or the physical garden sanctuary.</li>
+                <li><strong>Business transitions:</strong> in the unlikely event of a merger or acquisition, your data would be transferred under this same privacy pledge.</li>
+            </ul>
+            <p>We may share <em>anonymized, aggregated insights</em> (e.g., “40% of our visitors love mushroom workshops”) with partners to improve educational content — never personally identifiable.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌾 4. Data Security & Storage (Protecting the Root System)</h2>
+            <p>YardAlchemy Botanicals implements industry-standard security measures: SSL encryption, firewalls, limited access, and routine audits. While no internet transmission is 100% secure, we strive for vigilance equal to guarding a rare-medicinal garden.</p>
+            <ul>
+                <li>Your data is stored on secure servers located in the United States.</li>
+                <li>We retain personal information for as long as necessary to fulfill the purposes outlined — or as required by law (e.g., transaction records for tax purposes up to 7 years).</li>
+                <li>If you wish to request deletion of your account or personal data, contact <strong>privacy@yardalchemybotanicals.com</strong>. We’ll honor the “digital right to be forgotten” within 30 days, unless retention is mandated by law.</li>
+            </ul>
+            <div class="highlight-box">
+                🔐 <strong>Breach Notification:</strong> In the rare event of a data breach affecting personal information, we will notify affected individuals and relevant authorities within 72 hours, following applicable regulations (including GDPR-inspired principles wherever you reside).
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>🍃 5. Your Choices & Botanical Rights</h2>
+            <p>You have agency over your data ecosystem, just as a gardener decides where to plant each seed. Depending on your location (including GDPR or CCPA rights), you may request:</p>
+            <ul>
+                <li><strong>Access:</strong> receive a copy of personal data we hold about you.</li>
+                <li><strong>Rectification:</strong> correct inaccurate or incomplete information.</li>
+                <li><strong>Erasure (Right to be Forgotten):</strong> request deletion of your data where no legal obligation requires retention.</li>
+                <li><strong>Restriction or Objection:</strong> limit how we process your data for certain purposes (e.g., direct marketing).</li>
+                <li><strong>Data Portability:</strong> receive your data in a structured, machine-readable format.</li>
+            </ul>
+            <p>To exercise these rights, email <strong>privacy@yardalchemybotanicals.com</strong> with the subject “Data Stewardship Request”. We will not discriminate against you for exercising any privacy rights.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌿 6. Cookies & Tracking Technology — Nurturing Transparency</h2>
+            <p>Our website uses minimal, respectful cookies to enhance functionality and understand general traffic patterns. A “cookie” is a small text file stored on your device. We categorize:</p>
+            <ul>
+                <li><strong>Essential cookies:</strong> required for site operation (e.g., form submission, security). Cannot be disabled without breaking features.</li>
+                <li><strong>Analytics cookies:</strong> we use privacy-focused analytics (self-hosted or anonymized IP) to count visits and popular pages — no cross-site tracking.</li>
+                <li><strong>Functional preferences:</strong> remember your language or region if you’ve selected.</li>
+            </ul>
+            <p>You can manage cookies via your browser settings. However, disabling essential cookies may affect user experience. Full details in our <a href="cookies.html" style="color: var(--accent-gold);">Cookies Policy</a>.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌙 7. Third-Party Links & Apothecary Partners</h2>
+            <p>Our content may include links to external educational resources, seed libraries, or partners we trust. This Privacy Policy does not apply to third-party websites. We encourage you to read their privacy statements before sharing any personal data. YardAlchemy Botanicals is not responsible for the practices of other organizations.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>💧 8. International Transfers & Global Gardeners</h2>
+            <p>YardAlchemy Botanicals is based in the United States. If you access our website from outside the US, please be aware that your information may be transferred to, stored, and processed in the US, where data protection laws may differ. By using our website and services, you consent to this transfer. We rely on Standard Contractual Clauses or equivalent measures when relevant to protect international data flows.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>📬 9. Children’s Privacy (Seedlings Protection)</h2>
+            <p>Our botanical offerings are intended for a general audience. We do not knowingly collect personal information from children under 13. If a parent or guardian becomes aware that their child has provided us with information without consent, please contact us. We will promptly delete such data from our records.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>✍️ 10. Updates to These Terms of Privacy</h2>
+            <p>As our garden grows, so may this policy. We’ll post any changes on this page with a revised “Last Amended” date. If material changes significantly affect your rights (e.g., new data sharing practices), we’ll notify you via email or a prominent notice on our website at least 30 days in advance. Your continued use after updates constitutes acceptance of the revised policy.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>🌱 11. Contact Our Data Steward (Chief Herbal Privacy Officer)</h2>
+            <p>For questions, complaints, or to exercise your privacy rights, please reach out to our internal privacy team — we call them the “Green Shields.”</p>
+            <ul>
+                <li>✉️ <strong>Email:</strong> privacy@yardalchemybotanicals.com</li>
+                <li>📬 <strong>Mail:</strong> YardAlchemy Botanicals — Privacy Office, 123 Green Haven Lane, Asheville, NC 28801, USA</li>
+                <li>🌼 <strong>Phone:</strong> (828) 555-2524 (Mon–Thu, 10am–3pm EST)</li>
+            </ul>
+            <p>We aim to respond to all privacy inquiries within 10 business days. If you are unsatisfied with our response, you may have the right to lodge a complaint with your local data protection authority.</p>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 1rem; background: #fef5e3;">
+            🌟 <strong>Sacred Earth acknowledgment:</strong> By engaging with our services, you acknowledge that you have read and understood this Privacy Commitment. We treat your personal information like a precious perennial—respected, protected, and never exploited. Thank you for trusting us with your digital presence.
+        </div>
+    </div>
+
+    <!-- simple additional note: compliance signals -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+        <div style="background: white; border-radius: 60px; padding: 0.5rem 1rem; font-size: 0.85rem;"><span>✅ GDPR Aligned (Rights of Access, Erasure, Portability)</span></div>
+        <div style="background: white; border-radius: 60px; padding: 0.5rem 1rem; font-size: 0.85rem;"><span>🌎 CCPA/CPRA Compliant (Do Not Sell My Info)</span></div>
+        <div style="background: white; border-radius: 60px; padding: 0.5rem 1rem; font-size: 0.85rem;"><span>🔒 SSL Secure & Anonymized Analytics</span></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>📍 YardAlchemy Botanicals – 123 Green Haven Lane, Asheville, NC 28801</p>
+            <p>📞 (828) 555-ALCHEMY (252-4369) | ✉️ contact@yardalchemybotanicals.com</p>
+        </div>
+        <div class="footer-info">
+            <p>🌱 Organic · Regenerative · Community-rooted</p>
+            <p>🌿 Cultivating green wisdom since 2012</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Privacy</a> | <a href="cookies.html">Cookies</a></p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 YardAlchemy Botanicals – All rights reserved. Your privacy matters as much as the soil.</p>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top" id="backToTopBtn">🌿 Back to Top</a>
+
+<script>
+    // smooth back to top
+    const backButton = document.getElementById('backToTopBtn');
+    if (backButton) {
+        backButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // highlight active navigation for terms page (manual but consistent)
+    const currentPath = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === 'terms.html' && (currentPath === 'terms.html' || (currentPath === '' && href === 'terms.html'))) {
+            link.classList.add('active-nav');
+            link.style.color = 'var(--accent-gold)';
+        } else if (href === currentPath) {
+            link.classList.add('active-nav');
+            link.style.color = 'var(--accent-gold)';
+        }
+    });
+
+    // optional simple anchor handling for consistency
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>YardAlchemy Botanicals | About – Green Alchemy & Living Soil</title>
+    <meta name="description" content="Meet YardAlchemy Botanicals: our story, the herbalists, regenerative mission, and commitment to organic gardening. Cultivating sanctuary since 2012.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables (consistent with homepage) */
+        :root {
+            --deep-green: #1e4a2f;
+            --mid-green: #2e7d5e;
+            --soft-green: #9dc88d;
+            --light-green: #e2f0d9;
+            --accent-gold: #d4a373;
+            --soil-brown: #7f5539;
+            --white-smoke: #fefae0;
+        }
+
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* hero subsection for about */
+        .about-hero {
+            background: linear-gradient(115deg, #1e4a2fdd, #2e7d5ecc), url('https://placehold.co/1600x500/2e7d5e/white?text=Herbalist+Story') center/cover no-repeat;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--deep-green);
+            border-left: 6px solid var(--accent-gold);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .split-text {
+            background: white;
+            padding: 2rem;
+            border-radius: 32px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+
+        .split-text h3 {
+            color: var(--mid-green);
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+
+        .split-text p {
+            margin-bottom: 1rem;
+        }
+
+        .split-image img {
+            width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            object-fit: cover;
+            height: 100%;
+            max-height: 450px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-info h3 {
+            color: var(--deep-green);
+            font-size: 1.5rem;
+        }
+
+        .team-info .role {
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin: 0.3rem 0 0.8rem;
+        }
+
+        .values-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .value-item {
+            background: var(--light-green);
+            padding: 1.5rem;
+            border-radius: 28px;
+            flex: 1 1 220px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .value-item h4 {
+            font-size: 1.5rem;
+            color: var(--deep-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-banner {
+            background: var(--mid-green);
+            color: white;
+            border-radius: 48px;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .stat strong {
+            font-size: 2.2rem;
+            display: block;
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--deep-green);
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #ffb96a;
+            transform: scale(1.02);
+        }
+
+        footer {
+            background: var(--deep-green);
+            color: #ddd;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-info a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #3a6b4e;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                margin-top: 0.5rem;
+            }
+            .split-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            .stats-banner {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Yard<span>Alchemy</span> Botanicals</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="about-hero">
+    <div>
+        <h1>🌿 The Soul of YardAlchemy</h1>
+        <p>Where botanical wisdom meets regenerative magic — cultivating earth, community, and green lineage since 2012.</p>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Our Story Section: Unique narrative for the about page -->
+    <section>
+        <h2 class="section-title">📖 Our Genesis: From Wild Meadow to Living Classroom</h2>
+        <div class="split-grid">
+            <div class="split-text">
+                <h3>Rooted in Alchemical Tradition</h3>
+                <p>YardAlchemy Botanicals was born on a misty spring morning in the Blue Ridge Mountains. What started as one family’s quest to heal compacted clay soil transformed into a sanctuary for organic pioneers, herbalists, and permaculture artists. Our founder, Willow Greenfield, a former soil microbiologist and biodynamic farmer, envisioned a space where gardening transcends hobby — a living alchemy that reconnects people to the cycles of decay and rebirth.</p>
+                <p>Over a decade later, we’ve grown into a 12-acre regenerative hub: no-till vegetable terraces, a medicinal herb spiral, food forest arboretum, and the region’s largest public worm composting facility. But more than infrastructure, we've built a philosophy: <strong>every gardener is an alchemist</strong>, turning waste into gold, sunlight into nourishment, and knowledge into resilience.</p>
+                <a href="#mission" class="btn">Discover Our Core Ethos →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://placehold.co/700x500/9dc88d/1e4a2f?text=Founders+in+Food+Forest" alt="Willow and team in food forest">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision with deeper narrative -->
+    <section id="mission">
+        <h2 class="section-title">🌎 Mission + Regenerative Vision</h2>
+        <div class="split-grid" style="direction: rtl;">
+            <div class="split-text" style="direction: ltr;">
+                <h3>Soil. Sovereignty. Sanctuary.</h3>
+                <p>Our mission is to empower 1 million gardeners by 2030 with toxin-free techniques, seed independence, and climate-smart design. We believe each yard—from balcony pots to multi-acre homesteads—can become a carbon sink, pollinator refuge, and pharmacy. Through immersive workshops, digital almanacs, and land-based mentorship, YardAlchemy bridges ancestral practices with ecological science.</p>
+                <p>We operate a closed-loop nursery: all pots are biodegradable or recycled, water is harvested from rainfall, and plant waste becomes compost for the next generation. Our vision: a world where synthetic chemicals are obsolete, and every community has access to fresh food grown in living soil.</p>
+                <p>We are also a certified B Corp (pending 2025) and donate 5% of all proceeds to urban gardening initiatives in food deserts. <strong>Regeneration is not just an idea — it’s our daily practice.</strong></p>
+            </div>
+            <div class="split-image" style="direction: ltr;">
+                <img src="https://placehold.co/700x500/2e7d5e/white?text=Regenerative+Soil+Lab" alt="Soil testing and composting">
+            </div>
+        </div>
+    </section>
+
+    <!-- Values / Pillars of Alchemy -->
+    <section>
+        <h2 class="section-title">⚙️ The Four Pillars of YardAlchemy</h2>
+        <div class="values-list">
+            <div class="value-item">
+                <h4>🌱 Living Soil</h4>
+                <p>We teach microbial bridges, no-dig methods, and biochar integration. Healthy earth = nutrient-dense plants.</p>
+            </div>
+            <div class="value-item">
+                <h4>🧬 Seed Freedom</h4>
+                <p>Heirloom preservation & open-pollinated varieties. Our seed library safeguards 300+ heritage cultivars.</p>
+            </div>
+            <div class="value-item">
+                <h4>🌸 Herbal Autonomy</h4>
+                <p>Empower home apothecaries: from tinctures to poultices, reclaiming plant medicine wisdom.</p>
+            </div>
+            <div class="value-item">
+                <h4>🦋 Ecological Kinship</h4>
+                <p>Pollinator corridors, wildlife habitat, and native keystone species for thriving ecosystems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet The Team: Herb Alchemists, Garden stewards -->
+    <section>
+        <h2 class="section-title">👥 The Alchemists Behind The Garden</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://placehold.co/600x700/5c8a6f/white?text=Willow+Greenfield" alt="Founder Willow">
+                <div class="team-info">
+                    <h3>Willow Greenfield</h3>
+                    <div class="role">🌿 Head Herbalist & Soil Alchemist</div>
+                    <p>Former soil microbiologist, Willow blends science with ancestral earth magic. Author of “The Living Compost” and lead designer of our 2-acre food forest. Her mission: rewild suburban soils.</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://placehold.co/600x700/7f9e7b/white?text=Orion+Blake" alt="Permaculture director">
+                <div class="team-info">
+                    <h3>Orion Blake</h3>
+                    <div class="role">🏡 Permaculture Director</div>
+                    <p>Orion brings 15 years of arid-land regenerative design. He specializes in water harvesting, swale systems, and edible landscaping. Teaches our Advanced Guilds course.</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://placehold.co/600x700/9eaa7b/white?text=Sage+Rivera" alt="Seed curator">
+                <div class="team-info">
+                    <h3>Sage Rivera</h3>
+                    <div class="role">🌾 Seed Curator & Nursery Manager</div>
+                    <p>Sage runs our seed library and rare plant propagation program. Expert in grafting, cuttings, and heirloom tomato preservation. “Seeds are ancestral stories waiting to sprout.”</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://placehold.co/600x700/b7b87b/white?text=Hazel+Moon" alt="Community educator">
+                <div class="team-info">
+                    <h3>Hazel Moon</h3>
+                    <div class="role">📚 Community Education Lead</div>
+                    <p>Hazel leads workshops, apothecary intensives, and our youth gardening fellowship. Known for her gentle teaching style and deep knowledge of medicinal mushroom cultivation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Impact Stats / Long-form background content to extend narrative -->
+    <div class="stats-banner">
+        <div class="stat"><strong>12+</strong> acres of regenerative gardens</div>
+        <div class="stat"><strong>5,200+</strong> gardeners trained since 2018</div>
+        <div class="stat"><strong>40+</strong> native pollinator species thriving</div>
+        <div class="stat"><strong>8.5 tons</strong> organic waste composted annually</div>
+    </div>
+
+    <!-- In-depth background story: The Art of Green Alchemy (unique long text for about) -->
+    <section>
+        <h2 class="section-title">📜 The Deeper Alchemy: Our Origin Codex</h2>
+        <div class="long-read" style="background: white; border-radius: 32px; padding: 2rem; margin: 1rem 0;">
+            <h3>✦ Forging a Sanctuary: 2012 – 2025 ✦</h3>
+            <p>Before YardAlchemy Botanicals became a destination, the land was an abandoned pasture, compacted by heavy machinery, its topsoil nearly lifeless. Determined to prove that any landscape could be restored, Willow Greenfield and a handful of volunteers began a decade-long restoration: sheet mulching with cardboard, layering compost, planting dynamic accumulators like comfrey and borage. By 2016, the first fruit trees thrived without irrigation. By 2020, we had established the first public "Alchemy Folk School" teaching workshops from mushroom log inoculation to biodynamic calendar preparation.</p>
+            <p>Our approach is rooted in the concept of "slow alchemy": regeneration can't be rushed. We research, trial, and share openly. Did you know our intern program has trained over 150 aspiring horticulturists, many now running their own community gardens? Our on-site soil lab runs free pH and microbiology tests for low-income growers, because equitable access to knowledge is a cornerstone of ecological justice.</p>
+            <p>In 2023, we launched the "Apothecary Pathways" initiative — planting medicinal herb gardens at six public schools, teaching children how to make chamomile tea and calendula salves. This intergenerational model has grown beyond expectations, with over 2,000 students participating. At YardAlchemy, we see the garden as a classroom without walls, where every earthworm and blossom tells a story of connection.</p>
+            <p>What makes our alchemy different? We reject shortcuts. We don’t sell synthetic fertilizers or "miracle" products. Instead, we guide you through crafting your own compost extracts, building soil sponges, and co-creating with nature. Our eight-week online "Green Wizardry" course has reached gardeners in 17 countries, proving that regenerative principles transcend climate zones. From arid Arizona to rainy Wales, our students report higher yields, less pest pressure, and a profound sense of belonging to the living world.</p>
+            <p>We also maintain a seed bank that focuses on climate-adapted varieties: heat-tolerant lettuce, flood-resistant squash, and perennials that build soil carbon. Every year we donate thousands of seed packets to tribal nations and community farms. As a team, we prioritize low-tech, high-impact solutions: rain barrels, hand tools, solar dehydrators, and cob-building techniques for cold frames.</p>
+            <p>The future of YardAlchemy includes a full-fledged herbal dispensary and a field-tested curriculum for regenerative design certification. But our heart remains unchanged: we believe in the transformative power of digging your hands into rich earth, watching life emerge from a seed, and knowing you are part of something ancient and essential. That is the real alchemy.</p>
+            <p>We invite you to become a co-steward — whether by planting an herb pot on your windowsill, sharing a cutting with a neighbor, or joining one of our full-moon garden walks. Together, we turn yards into sanctuaries.</p>
+        </div>
+    </section>
+
+    <!-- Connect / call to action & collaboration -->
+    <section>
+        <h2 class="section-title">🤝 Join The Living Guild</h2>
+        <div class="split-grid">
+            <div class="split-text">
+                <h3>Volunteer, Intern, or Partner</h3>
+                <p>We’re stronger together. YardAlchemy offers seasonal volunteer days, a 6-month immersive internship, and partnership opportunities for schools & non-profits. Get your hands dirty, learn propagation skills, or help us build the next food forest terrace.</p>
+                <p>Email our community coordinator at <strong>grow@yardalchemybotanicals.com</strong> or call (828) 555-ALCHEMY. We also welcome BIPOC and beginner gardeners — no experience needed, just an open heart for the land.</p>
+                <a href="contact.html" class="btn">Reach out →</a>
+            </div>
+            <div class="split-image">
+                <img src="https://placehold.co/700x500/d4a373/1e4a2f?text=Community+Workshop" alt="Workshop volunteers">
+            </div>
+        </div>
+    </section>
+
+    <!-- Press & Recognition (optional brief) -->
+    <div style="background: #e2f0d9; border-radius: 36px; padding: 1.5rem; text-align: center; margin: 1rem 0;">
+        <p style="font-size: 1.1rem;">✨ Featured in: <strong>Organic Gardener Magazine</strong> · <strong>Permaculture North America</strong> · <strong>Southern Heirloom Living</strong> · <strong>The Herbalist's Almanac</strong> ✨</p>
+        <p style="margin-top: 0.5rem;">Awarded "Best Regenerative Nursery 2024" by Appalachian Botanical Alliance.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>📍 YardAlchemy Botanicals – 123 Green Haven Lane, Asheville, NC 28801</p>
+            <p>📞 (828) 555-ALCHEMY (252-4369) | ✉️ contact@yardalchemybotanicals.com</p>
+        </div>
+        <div class="footer-info">
+            <p>🌱 Organic · Regenerative · Community-rooted</p>
+            <p><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a></p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 YardAlchemy Botanicals – Cultivating green wisdom since 2012. Rooted in reciprocity.</p>
+    </div>
+</footer>
+
+<!-- Smooth scroll for any internal hash links (if needed) -->
+<script>
+    document.querySelectorAll('.nav-links a, .btn').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href !== '#' && href.startsWith('#')) {
+                const targetElem = document.querySelector(href);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
